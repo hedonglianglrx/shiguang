@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{text-align:center;}
+	#dyg{width:500px;height:300px;background:red;margin:0 auto;}
+	#deg{width:500px;height:300px;background:yellow;display:none;margin:0 auto;}
+	</style>
+</head>
+<body id="body">
+	
+	<div id="dyg"><input type="button" value="皮肤1" ><input type="button" value="皮肤2" id="pf2"></div>
+	<div id="deg"><input type="button" value="皮肤1" id="pf1"><input type="button" value="皮肤2" ></div>
+</body>
+</html>
+<script>
+	var body=document.getElementById('body');
+	var arr=["url(images/6.jpg)","url(images/31.jpg)"]
+	var pf1=document.getElementById('pf1');
+	var pf2=document.getElementById('pf2');
+	var dyg=document.getElementById('dyg');
+	var deg=document.getElementById('deg');
+	body.style.background=arr[0]
+	pf1.onclick=function(){
+		var i=0;
+		body.style.background=arr[i];
+		dyg.style.display="block";
+		deg.style.display="none";
+	}
+	pf2.onclick=function(){
+		var i=1;
+		body.style.background=arr[i];
+		dyg.style.display="none";
+		deg.style.display="block";
+
+	}
+	
+</script>
